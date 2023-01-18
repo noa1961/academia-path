@@ -8,7 +8,7 @@ $queryBuilder = new QueryBuilder($connection);
 
 $colleges = $queryBuilder->getAll('college','App\Model\College');
 // fill relationship
-foreach ($colleges as $college) {
+foreach ($college as $college) {
     $college->type = $queryBuilder->findById('type',$college->type_id,'App\Model\Type');
 }
 

@@ -6,6 +6,6 @@ use App\Database\QueryBuilder;
 $connection = Connection::make();
 $queryBuilder = new QueryBuilder($connection);
 
-$editoras = $queryBuilder->getAll('editora','App\Model\Editora');
+$types = $queryBuilder->getAll('type','App\Model\Type');
 
-require 'views/livros.create.view.php';
+require 'views/colleges.create.view.php';

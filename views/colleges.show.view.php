@@ -9,7 +9,7 @@
 <body>
   <div class="container-fluid">
     <div class="jumbotron">
-      <h1 class="display-4"><?php echo $livro->nome; ?></h1>
+      <h1 class="display-4"><?php echo $college->name; ?></h1>
       <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit blanditiis beatae error! Consequuntur in aliquid delectus ad recusandae placeat eveniet quasi incidunt dolore nisi, porro ipsa quibusdam voluptates! Sunt, quibusdam?</p>
     </div>
   </div>
