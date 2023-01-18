@@ -14,7 +14,7 @@ if (!isset($matches[3])) {
 }
 else {
     $baseConfigURL = $matches[3];
-    $realURI = substr(trim($_SERVER['REQUEST_URI'], '/'),strlen($baseConfigURL)+1);    
+    $realURI = substr(trim($_SERVER['REQUEST_URI'], '/'),strlen($baseConfigURL)+1);
 }
 // new global function to help create links and redirects
 function route($uri) {
@@ -30,9 +30,10 @@ try {
     $router->direct(
         $realURI,
         isset($_POST['_method'])?$_POST['_method']:$_SERVER['REQUEST_METHOD']
-    );        
+    );
 }
 catch (Exception $e) {
     header('HTTP/1.1 404 Not Found', true, 404);
     echo '<h1 style="text-align: center;">Not Found!</h1>';
+    echo $e->getMessage();
 }
