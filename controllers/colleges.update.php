@@ -6,10 +6,16 @@ use App\Database\QueryBuilder;
 $connection = Connection::make();
 $queryBuilder = new QueryBuilder($connection);
 
-$queryBuilder->update('livro',$id,[
-    'nome' => $_POST['nome'],
-    'editora_id' => $_POST['editora_id'],
-    'pags' => $_POST['pags']
+$queryBuilder->update('college',$id,[
+    'name' => $_POST['name'],
+    'type_id' => $_POST['type_id'],
+    'ranking' => $_POST['ranking'],
+    'description' => $_POST['description'],
+    'acceptance_rate' => $_POST['acceptanceRate'],
+    'graduation_rate' => $_POST['graduationRate'],
+    'cost' => $_POST['tuitionCost'],
+    'logo' => $_POST['tuitionCost'],
+    'college_img' => $_POST['tuitionCost']
 ]);
 
-redirect('livros');
+redirect('colleges');
