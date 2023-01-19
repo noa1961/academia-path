@@ -6,10 +6,9 @@ use App\Database\QueryBuilder;
 $connection = Connection::make();
 $queryBuilder = new QueryBuilder($connection);
 
-$livro = $queryBuilder->findById('livro',$id,'App\Model\Livro');
-// fill relationship
-$livro->editora = $queryBuilder->findById('editora',$livro->editora_id,'App\Model\Editora');
+$college = $queryBuilder->findById('college',$id,'App\Model\College');
+$college->type = $queryBuilder->findById('type',$college->type_id,'App\Model\Type');
 
-$editoras = $queryBuilder->getAll('editora','App\Model\Editora');
+$types = $queryBuilder->getAll('type','App\Model\Type');
 
-require 'views/livros.edit.view.php';
+require 'views/colleges.edit.view.php';
