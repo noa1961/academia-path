@@ -29,7 +29,7 @@ $router->post('colleges', function() {
 });
 
 // edit colleges
-$router->get('collcollegesege/(\d+)/edit', function($id) {
+$router->get('colleges/(\d+)/edit', function($id) {
     require 'controllers/colleges.edit.php';
 });
 $router->patch('colleges/(\d+)', function($id) {
