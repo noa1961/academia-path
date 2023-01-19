@@ -6,6 +6,6 @@ use App\Database\QueryBuilder;
 $connection = Connection::make();
 $queryBuilder = new QueryBuilder($connection);
 
-$livro = $queryBuilder->deleteById('livro',$id);
+$college = $queryBuilder->deleteById('college',$id);
 
-redirect('livros');
+redirect('colleges');
