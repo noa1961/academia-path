@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-  <div class="container-fluid">
+  <div class="container">
     <div class="jumbotron">
       <h1 class="display-4"><?php echo $college->name; ?></h1>
-      <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit blanditiis beatae error! Consequuntur in aliquid delectus ad recusandae placeat eveniet quasi incidunt dolore nisi, porro ipsa quibusdam voluptates! Sunt, quibusdam?</p>
+      <p class="lead"><?php echo $college->description; ?></p>
     </div>
   </div>
 </body>
