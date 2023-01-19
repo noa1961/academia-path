@@ -16,7 +16,7 @@
           ?>
           <li class="list-group-item">
             <a href="<?php echo route('colleges/'.$college->id);?>"><?php echo $college->name; ?> (<?php echo $college->type->type; ?>)</a>
-            <span class="badge badge-primary badge-pill"><?php echo $college->type; ?></span>
+            <span class="badge badge-primary badge-pill">#<?php echo $college->ranking; ?></span>
             <form class="m-1 form-inline float-right" method="POST" action="<?php echo route('colleges/'.$college->id);?>">
               <input type="hidden" name="_method" value="DELETE">
               <button type="submit" class="btn btn-danger">Delete</button>
