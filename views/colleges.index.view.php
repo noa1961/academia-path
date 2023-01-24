@@ -8,8 +8,8 @@
 </head>
 <body>
   <div class="container">
-    <h1 class="mt-5">Colleges</h1>
-    <a class="btn btn-dark" href="<?php echo route('colleges/create'); ?>" role="button">Insert</a>
+    <h1 class="mt-5 mb-5">Admin Dashboard</h1>
+    <a class="btn btn-dark" href="<?php echo route('colleges/create'); ?>" role="button">New College</a>
     <ul class="list-group mt-4">
       <?php
         foreach($colleges as $college) {
@@ -21,7 +21,7 @@
               <input type="hidden" name="_method" value="DELETE">
               <button type="submit" class="btn btn-danger">Delete</button>
             </form>
-            <a class="m-1 btn btn-dark float-right" href="<?php echo route('colleges/'.$college->id.'/edit');?>" role="button">Editar</a>
+            <a class="m-1 btn btn-dark float-right" href="<?php echo route('colleges/'.$college->id.'/edit');?>" role="button">Edit</a>
           </li>
           <?php
         }

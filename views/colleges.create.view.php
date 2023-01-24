@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="container">
-    <h1 class="mt-5">New College</h1>
+    <h1 class="mt-5 mb-5">New College</h1>
     <form method="POST" action="<?php echo route('colleges'); ?>">
       <div class="form-group">
         <input type="text" class="form-control" name="name" placeholder="Input the college name" required>
@@ -39,7 +39,7 @@
         <div class="from-group">
             <input type="number" class="form-control mt-3" name="tuitionCost" placeholder="Insert the college Tuition Cost">
         </div>
-        <button type="submit" class="btn btn-primary mt-3">Add</button>
+        <button type="submit" class="btn btn-dark mt-3">Add</button>
     </form>
     </div>
 </body>

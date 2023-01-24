@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="container">
-    <h1 class="mt-5">Edit College</h1>
+    <h1 class="mt-5 mb-5">Edit College</h1>
     <form method="POST" action="<?php echo route('colleges/'.$college->id);?>">
       <input type="hidden" name="_method" value="PATCH">
       <div class="form-group">
@@ -31,7 +31,7 @@
       <div class="form-group">
         <input type="text" class="form-control" name="pags" value="<?php echo $livro->pags; ?>" required>
       </div>
-        <button type="submit" class="btn btn-danger">Gravar</button>
+        <button type="submit" class="btn btn-dark">Save Changes</button>
     </form>
     </div>
 </body>
