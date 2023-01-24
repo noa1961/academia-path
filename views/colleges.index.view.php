@@ -7,9 +7,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-  <div class="container">
+  <div class="container mb-5">
     <h1 class="mt-5 mb-5">Admin Dashboard</h1>
-    <a class="btn btn-dark" href="<?php echo route('colleges/create'); ?>" role="button">New College</a>
     <ul class="list-group mt-4">
       <?php
         foreach($colleges as $college) {
@@ -27,6 +26,7 @@
         }
       ?>
     </ul>
+    <a class="btn btn-dark mt-3" href="<?php echo route('colleges/create'); ?>" role="button">Add College</a>
     </div>
 </body>
 </html>

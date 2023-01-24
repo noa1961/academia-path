@@ -9,36 +9,36 @@
 <body>
   <div class="container">
     <h1 class="mt-5 mb-5">New College</h1>
-    <form method="POST" action="<?php echo route('colleges'); ?>">
+    <form class="mb-5" method="POST" action="<?php echo route('colleges'); ?>">
 
       <!-- College Name -->
       <div class="form-group">
-        <input type="text" class="form-control" name="name" placeholder="Input the college name" required>
+        <input type="text" class="form-control" name="name" placeholder="Input the College Name" required>
       </div>
 
       <!-- College Description -->
       <div class="from-group mb-3">
-        <input type="text" class="form-control" name="description" placeholder="Insert the college description">
+        <input type="text" class="form-control" name="description" placeholder="Input the College Description">
       </div>
 
       <!-- College Acceptance Rate -->
       <div class="from-group">
-          <input type="number" class="form-control mt-3" name="acceptanceRate" placeholder="Insert the college Acceptance Rate">
+          <input type="number" class="form-control mt-3" name="acceptanceRate" placeholder="Input the College Acceptance Rate">
       </div>
 
       <!-- College Graduation Rate -->
       <div class="from-group">
-          <input type="number" class="form-control mt-3 mb-3" name="graduationRate" placeholder="Insert the college Graduation  Rate">
+          <input type="number" class="form-control mt-3 mb-3" name="graduationRate" placeholder="Input the College Graduation Rate">
       </div>
 
       <!-- College Tuition Cost -->
       <div class="from-group">
-          <input type="number" class="form-control mt-3 mb-3" name="tuitionCost" placeholder="Insert the college Tuition Cost">
+          <input type="number" class="form-control mt-3 mb-3" name="tuitionCost" placeholder="Input the College Tuition Cost">
       </div>
 
       <!-- College Ranking -->
       <div class="form-group">
-        <input type="number" class="form-control" name="ranking" placeholder="Insert the college ranking" required>
+        <input type="number" class="form-control" name="ranking" placeholder="College Ranking" required>
       </div>
 
       <!-- College Logo -->
@@ -80,6 +80,7 @@
       </div>
 
         <button type="submit" class="btn btn-dark mt-3">Add</button>
+        <a class="btn btn-danger mt-3 ml-2" href="<?php echo route('colleges'); ?>" role="button">Cancel</a>
     </form>
     </div>
 </body>
