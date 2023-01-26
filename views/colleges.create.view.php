@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academia Path</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
@@ -44,13 +47,13 @@
       <!-- College Logo -->
       <div class="custom-file mb-3">
         <input type="file" class="custom-file-input" name="collegeLogo" required>
-        <label class="custom-file-label" style="color: gray;" for="validatedCustomFile">Upload a College Logo...</label>
+        <label class="custom-file-label" style="color: gray;" for="validatedCustomFile1">Upload a College Logo...</label>
       </div>
 
       <!-- College Image -->
       <div class="custom-file mb-3">
         <input type="file" class="custom-file-input" name="collegeImage" required>
-        <label class="custom-file-label" style="color: gray;" for="validatedCustomFile">Upload a College Image...</label>
+        <label class="custom-file-label" style="color: gray;" for="validatedCustomFile2">Upload a College Image...</label>
       </div>
 
       <!-- College Type -->
