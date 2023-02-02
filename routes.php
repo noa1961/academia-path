@@ -1,26 +1,26 @@
 <?php
 
-// home page
+// Home page
 $router->get('', function() {
     require 'controllers/home.php';
 });
 
-// list colleges
+// List colleges
 $router->get('colleges', function() {
     require 'controllers/colleges.index.php';
 });
 
-// show colleges with id
+// Show colleges with id
 $router->get('colleges/(\d+)', function($id) {
     require 'controllers/colleges.show.php';
 });
 
-// delete colleges
+// Delete colleges
 $router->delete('colleges/(\d+)', function($id) {
     require 'controllers/colleges.delete.php';
 });
 
-// add colleges
+// Add colleges
 $router->get('colleges/create', function() {
     require 'controllers/colleges.create.php';
 });
@@ -28,7 +28,7 @@ $router->post('colleges', function() {
     require 'controllers/colleges.store.php';
 });
 
-// edit colleges
+// Edit colleges
 $router->get('colleges/(\d+)/edit', function($id) {
     require 'controllers/colleges.edit.php';
 });
@@ -36,4 +36,4 @@ $router->patch('colleges/(\d+)', function($id) {
     require 'controllers/colleges.update.php';
 });
 
-// login user
+// Login user

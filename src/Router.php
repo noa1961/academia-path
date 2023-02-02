@@ -14,19 +14,19 @@ class Router
   }
 
   public function get($uri, $callback) {
-    $this->routes['GET'][$uri] = $callback; 
+    $this->routes['GET'][$uri] = $callback;
   }
 
   public function post($uri, $callback) {
-    $this->routes['POST'][$uri] = $callback; 
+    $this->routes['POST'][$uri] = $callback;
   }
 
   public function delete($uri, $callback) {
-    $this->routes['DELETE'][$uri] = $callback; 
+    $this->routes['DELETE'][$uri] = $callback;
   }
 
   public function patch($uri, $callback) {
-    $this->routes['PATCH'][$uri] = $callback; 
+    $this->routes['PATCH'][$uri] = $callback;
   }
 
   public function direct($uri,$method) {
