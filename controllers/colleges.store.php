@@ -6,17 +6,45 @@ use App\Database\QueryBuilder;
 $connection = Connection::make();
 $queryBuilder = new QueryBuilder($connection);
 
-$queryBuilder->create('college',[
+$college_id = $queryBuilder->create('college',[
     'name' => $_POST['name'],
     'description' => $_POST['description'],
     'acceptance_rate' => $_POST['acceptanceRate'],
     'graduation_rate' => $_POST['graduationRate'],
     'ranking' => $_POST['ranking'],
     'cost' => $_POST['tuitionCost'],
-    'logo' => $_POST['collegeLogo'],
-    'college_img' => $_POST['collegeImage'],
     'type_id' => $_POST['type_id'],
     'location_id' => $_POST['location_id']
 ]);
+
+// Image submission
+$file_extension_logo = pathinfo ($_FILES['collegeLogo']['name'], PATHINFO_EXTENSION);
+$file_extension_image = pathinfo ($_FILES['collegeImage']['name'], PATHINFO_EXTENSION);
+
+// Image extension
+$file_extension_logo = strtolower($file_extension_logo);
+$file_extension_image = strtolower($file_extension_image);
+
+$valid_extension = array("png");
+
+if(in_array($file_extension_logo, $valid_extension)) {
+
+    // Declare Path
+    $target_path_logo = "img/upload/logos/$college_id.png";
+
+    // Move File
+    move_uploaded_file($_FILES['collegeLogo']['tmp_name'], $target_path_logo);
+
+}
+
+if(in_array($file_extension_image, $valid_extension)) {
+
+    // Declare Path
+    $target_path_campus = "img/upload/campus/$college_id.png";
+
+    // Move File
+    move_uploaded_file($_FILES['collegeImage']['tmp_name'], $target_path_campus);
+
+}
 
 redirect('colleges');
