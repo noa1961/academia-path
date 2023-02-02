@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academia Path</title>
+    <script src="https://cdn.tiny.cloud/1/w7vfoqwcydbaq6fu605jp23tfctwleo99swlki5mpgmrgbl3/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>tinymce.init({selector:'textarea'});</script>
+    <link rel="icon" type="image/x-icon" href="/src/img/favicon.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
             <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -12,16 +15,11 @@
 <body>
   <div class="container">
     <h1 class="mt-5 mb-5">New College</h1>
-    <form class="mb-5" method="POST" action="<?php echo route('colleges'); ?>">
+    <form class="mb-5" enctype="multipart/form-data" method="POST" action="<?php echo route('colleges'); ?>">
 
       <!-- College Name -->
       <div class="form-group">
         <input type="text" class="form-control" name="name" placeholder="Input the College Name" required>
-      </div>
-
-      <!-- College Description -->
-      <div class="from-group mb-3">
-        <input type="text" class="form-control" name="description" placeholder="Input the College Description">
       </div>
 
       <!-- College Acceptance Rate -->
@@ -80,6 +78,11 @@
             }
           ?>
         </select>
+      </div>
+
+      <!-- College Description -->
+      <div class="from-group mb-3">
+        <textarea class="form-control" name="description" placeholder="Input the College Description"></textarea>
       </div>
 
         <button type="submit" class="btn btn-dark mt-3">Add</button>
