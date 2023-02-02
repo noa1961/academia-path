@@ -29,7 +29,10 @@ class QueryBuilder
         $stmt = $this->pdo->prepare("INSERT INTO $table (".
             implode(",",array_keys($attributes)).
             ") VALUES (:".implode(', :', array_keys($attributes)).")");
-        $stmt->execute($attributes);
+        if ($stmt->execute($attributes))
+            return $this->pdo->lastInsertId();
+        else
+            return false;
     }
     public function update($table,$id,$attributes) {
         $query = "UPDATE $table SET ";
