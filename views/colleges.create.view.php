@@ -27,34 +27,34 @@
 
       <!-- College Acceptance Rate -->
       <div class="form-inline">
-        <label for="acceptanceRate">Acceptance Rate</label>
+        <label for="acceptanceRate">Acceptance Rat (%)</label>
       </div>
       <div class="from-group">
-        <input type="number" class="form-control mb-3" name="acceptanceRate" id="acceptanceRate" placeholder="Input the College Acceptance Rate" required>
+        <input type="number" min="0" class="form-control mb-3" name="acceptanceRate" id="acceptanceRate" placeholder="Input the College Acceptance Rate" required>
       </div>
 
       <!-- College Graduation Rate -->
       <div class="form-inline">
-        <label for="graduationRate">Graduation Rate</label>
+        <label for="graduationRate">Graduation Rate (%)</label>
       </div>
       <div class="from-group">
-        <input type="number" class="form-control mb-3" name="graduationRate" id="graduationRate" placeholder="Input the College Graduation Rate" required>
+        <input type="number" min="0" class="form-control mb-3" name="graduationRate" id="graduationRate" placeholder="Input the College Graduation Rate" required>
       </div>
 
       <!-- College Tuition Cost -->
       <div class="form-inline">
-        <label for="tuitionCost">Tuition Cost</label>
+        <label for="tuitionCost">Tuition Cost ($USD)</label>
       </div>
       <div class="from-group">
-        <input type="number" class="form-control mb-3" name="tuitionCost" id="tuitionCost" placeholder="Input the College Tuition Cost" required>
+        <input type="number" min="0" class="form-control mb-3" name="tuitionCost" id="tuitionCost" placeholder="Input the College Tuition Cost" required>
       </div>
 
       <!-- College Ranking -->
       <div class="form-inline">
-        <label for="ranking">Ranking</label>
+        <label for="ranking">Ranking (#)</label>
       </div>
       <div class="form-group">
-        <input type="number" class="form-control mb-3" name="ranking" id="ranking"placeholder="College Ranking" required>
+        <input type="number" min="1" class="form-control mb-3" name="ranking" id="ranking"placeholder="College Ranking" required>
       </div>
 
       <!-- College Logo -->

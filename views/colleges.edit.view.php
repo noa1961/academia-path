@@ -25,37 +25,41 @@
 
       <!-- Fetch College Acceptance Rate -->
       <div class="form-inline">
-        <label for="acceptanceRate">Acceptance Rate</label>
+        <label for="acceptanceRate">Acceptance Rate (%)</label>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" name="acceptanceRate" id="acceptanceRate" value="<?php echo $college->acceptance_rate; ?>" required>
+        <input type="number" min="0" class="form-control" name="acceptanceRate" id="acceptanceRate" value="<?php echo $college->acceptance_rate; ?>" required>
       </div>
 
       <!-- Fetch College Graduation Rate -->
       <div class="form-inline">
-        <label for="graduationRate">Graduation Rate</label>
+        <label for="graduationRate">Graduation Rate (%)</label>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" name="graduationRate" id="graduationRate" value="<?php echo $college->graduation_rate; ?>" required>
+        <input type="number" min="0" class="form-control" name="graduationRate" id="graduationRate" value="<?php echo $college->graduation_rate; ?>" required>
       </div>
 
       <!-- Fetch College Tuition Cost -->
       <div class="form-inline">
-        <label for="tuitionCost">Tuition Cost</label>
+        <label for="tuitionCost">Tuition Cost ($USD)</label>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" name="tuitionCost" id="tuitionCost" value="<?php echo $college->cost; ?>" required>
+        <input type="number" min="0" class="form-control" name="tuitionCost" id="tuitionCost" value="<?php echo $college->cost; ?>" required>
       </div>
 
       <!-- Fetch College Ranking -->
       <div class="form-inline">
-        <label for="ranking">Ranking</label>
+        <label for="ranking">Ranking (#)</label>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" name="ranking" id="ranking" value="<?php echo $college->ranking; ?>" required>
+        <input type="number" min="1" class="form-control" name="ranking" id="ranking" value="<?php echo $college->ranking; ?>" required>
       </div>
 
+      <!-- Fetch College Logo -->
+
+
       <!-- Fetch College Image -->
+
 
       <!-- Fetch College Type -->
       <div class="form-inline">
