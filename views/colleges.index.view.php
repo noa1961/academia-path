@@ -9,8 +9,8 @@
 </head>
 <body>
   <div class="container mb-5">
-    <h1 class="mt-5 mb-5">Admin Dashboard</h1>
-    <ul class="list-group mt-4">
+    <h1 class="d-flex justify-content-center mt-5 mb-5">Admin Dashboard</h1>
+    <ul class="list-group mt-5">
       <?php
         foreach($colleges as $college) {
           ?>
@@ -21,13 +21,15 @@
               <input type="hidden" name="_method" value="DELETE">
               <button type="submit" class="btn btn-danger">Delete</button>
             </form>
-            <a class="m-1 btn btn-dark float-right" href="<?php echo route('colleges/'.$college->id.'/edit');?>" role="button">Edit</a>
+            <a class="m-1 btn btn-dark float-right pr-4 pl-4" href="<?php echo route('colleges/'.$college->id.'/edit');?>" role="button">Edit</a>
           </li>
           <?php
         }
       ?>
     </ul>
-    <a class="btn btn-dark mt-3" href="<?php echo route('colleges/create'); ?>" role="button">Add College</a>
+    <div class="d-flex justify-content-center ">
+      <a class="btn btn-dark mt-3 pr-4 pl-4" href="<?php echo route('colleges/create'); ?>" role="button">+</a>
+    </div>
     </div>
 </body>
 </html>

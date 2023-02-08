@@ -11,39 +11,58 @@
 </head>
 <body>
   <div class="container">
-    <h1 class="mt-5 mb-5">Edit College</h1>
+    <h1 class="d-flex justify-content-center mt-5 mb-5">Edit College</h1>
     <form method="POST" action="<?php echo route('colleges/'.$college->id);?>">
     <input type="hidden" name="_method" value="PATCH">
+
     <!-- Fetch College Name -->
+      <div class="form-inline">
+        <label for="name">Name</label>
+      </div>
       <div class="form-group">
         <input type="text" class="form-control" name="name" value="<?php echo $college->name; ?>" required>
       </div>
 
       <!-- Fetch College Acceptance Rate -->
+      <div class="form-inline">
+        <label for="acceptanceRate">Acceptance Rate</label>
+      </div>
       <div class="form-group">
-        <input type="text" class="form-control" name="acceptanceRate" value="<?php echo $college->acceptance_rate; ?>" required>
+        <input type="text" class="form-control" name="acceptanceRate" id="acceptanceRate" value="<?php echo $college->acceptance_rate; ?>" required>
       </div>
 
       <!-- Fetch College Graduation Rate -->
+      <div class="form-inline">
+        <label for="graduationRate">Graduation Rate</label>
+      </div>
       <div class="form-group">
-        <input type="text" class="form-control" name="graduationRate" value="<?php echo $college->graduation_rate; ?>" required>
+        <input type="text" class="form-control" name="graduationRate" id="graduationRate" value="<?php echo $college->graduation_rate; ?>" required>
       </div>
 
       <!-- Fetch College Tuition Cost -->
+      <div class="form-inline">
+        <label for="tuitionCost">Tuition Cost</label>
+      </div>
       <div class="form-group">
-        <input type="text" class="form-control" name="graduationRate" value="<?php echo $college->cost; ?>" required>
+        <input type="text" class="form-control" name="tuitionCost" id="tuitionCost" value="<?php echo $college->cost; ?>" required>
       </div>
 
       <!-- Fetch College Ranking -->
+      <div class="form-inline">
+        <label for="ranking">Ranking</label>
+      </div>
       <div class="form-group">
-        <input type="text" class="form-control" name="ranking" value="<?php echo $college->ranking; ?>" required>
+        <input type="text" class="form-control" name="ranking" id="ranking" value="<?php echo $college->ranking; ?>" required>
       </div>
 
       <!-- Fetch College Image -->
 
       <!-- Fetch College Type -->
+      <div class="form-inline">
+        <label for="type_id">Type</label>
+      </div>
       <div class="form-group">
-        <select class="custom-select" name="type_id">
+        <select class="custom-select" name="type_id" id="type_id">
           <?php
             foreach($types as $type) {
               ?>
@@ -58,8 +77,11 @@
       </div>
 
       <!-- Fetch College Location -->
+      <div class="form-inline">
+        <label for="location_id">Location</label>
+      </div>
       <div class="form-group">
-        <select class="custom-select" name="location_id">
+        <select class="custom-select" name="location_id" id="location_id">
           <?php
             foreach($locations as $location) {
               ?>
@@ -74,12 +96,16 @@
       </div>
 
       <!-- Fetch College Description -->
-      <div class="form-group">
-        <textarea class="form-control" name="description" required><?php echo $college->description; ?></textarea>
+      <div class="form-inline">
+        <label for="description">Description</label>
       </div>
-
-        <button type="submit" class="btn btn-dark mt-3 mb-5">Save Changes</button>
-        <a class="btn btn-danger mt-3 ml-2 mb-5" href="<?php echo route('colleges'); ?>" role="button">Cancel</a>
+      <div class="form-group">
+        <textarea class="form-control" name="description" id="description" required><?php echo $college->description; ?></textarea>
+      </div>
+      <div class="buttonSection d-flex justify-content-center mb-5">
+        <button type="submit" class="btn btn-dark mt-3 pl-5 pr-5">Save</button>
+        <a class="btn btn-danger mt-3 ml-2 pl-5 pr-5" href="<?php echo route('colleges'); ?>" role="button">Cancel</a>
+      </div>
     </form>
     </div>
 </body>
