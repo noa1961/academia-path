@@ -6,7 +6,7 @@
   <title>Academia Path</title>
   <script src="https://cdn.tiny.cloud/1/w7vfoqwcydbaq6fu605jp23tfctwleo99swlki5mpgmrgbl3/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
   <script>tinymce.init({selector:'textarea'});</script>
-  <link rel="icon" type="image/x-icon" href="/src/img/favicon.png">
+  <link rel="icon" type="image/x-icon" href="/img/favicon.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
