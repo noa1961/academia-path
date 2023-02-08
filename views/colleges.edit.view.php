@@ -56,10 +56,26 @@
       </div>
 
       <!-- Fetch College Logo -->
-
+      <div class="form-inline">
+        <label for="collegeLogo">Logo</label>
+      </div>
+      <div class="form-group">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" name="collegeLogo" id="collegeLogo">
+          <label class="custom-file-label" style="color: gray;" for="validatedCustomFile1">Upload a College Logo...</label>
+        </div>
+      </div>
 
       <!-- Fetch College Image -->
-
+      <div class="form-inline">
+        <label for="collegeImage">Campus Image</label>
+      </div>
+      <div class="form-group">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" name="collegeImage" id="collegeImage">
+          <label class="custom-file-label" style="color: gray;" for="validatedCustomFile2">Upload a College Image...</label>
+        </div>
+      </div>
 
       <!-- Fetch College Type -->
       <div class="form-inline">
