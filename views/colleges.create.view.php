@@ -27,7 +27,7 @@
 
       <!-- College Acceptance Rate -->
       <div class="form-inline">
-        <label for="acceptanceRate">Acceptance Rat (%)</label>
+        <label for="acceptanceRate">Acceptance Rate (%)</label>
       </div>
       <div class="from-group">
         <input type="number" min="0" class="form-control mb-3" name="acceptanceRate" id="acceptanceRate" placeholder="Input the College Acceptance Rate" required>
