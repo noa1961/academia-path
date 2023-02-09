@@ -61,7 +61,7 @@
       </div>
     </section>
     <section id="description">
-      <div class="mt-3">
+      <div class="mt-3 mb-5">
         <p class="lead"><?php echo $college->description; ?></p>
       </div>
     </section>

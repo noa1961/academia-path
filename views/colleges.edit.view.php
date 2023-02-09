@@ -8,10 +8,11 @@
   <script>tinymce.init({selector:'textarea'});</script>
   <link rel="icon" type="image/x-icon" href="/img/favicon.png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/styles/styles.css">
 </head>
 <body>
   <div class="container">
-    <h1 class="d-flex justify-content-center mt-5 mb-5">Edit College</h1>
+    <h1 class="display-4 d-flex justify-content-center mt-5 mb-5">Edit College</h1>
     <form method="POST" enctype="multipart/form-data" action="<?php echo route('colleges/'.$college->id);?>">
     <input type="hidden" name="_method" value="PATCH">
 

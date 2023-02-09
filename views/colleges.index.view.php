@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="container mb-5">
-    <h1 class="d-flex justify-content-center mt-5 mb-5">Admin Dashboard</h1>
+    <h1 class="display-4 d-flex justify-content-center mt-5 mb-5">Admin Dashboard</h1>
     <ul class="list-group mt-5">
       <?php
         foreach($colleges as $college) {
