@@ -17,6 +17,16 @@ $queryBuilder->update('college',$id,[
     'location_id' => $_POST['location_id']
 ]);
 
+// Image submission
+$file_extension_logo = pathinfo ($_FILES['collegeLogo']['name'], PATHINFO_EXTENSION);
+$file_extension_image = pathinfo ($_FILES['collegeImage']['name'], PATHINFO_EXTENSION);
+
+// Image extension
+$file_extension_logo = strtolower($file_extension_logo);
+$file_extension_image = strtolower($file_extension_image);
+
+$valid_extension = array("png");
+
 if(isset($_FILES["collegeLogo"]) && in_array($file_extension_logo, $valid_extension)) {
 
     // Declare Path

@@ -12,7 +12,7 @@
 <body>
   <div class="container">
     <h1 class="d-flex justify-content-center mt-5 mb-5">Edit College</h1>
-    <form method="POST" action="<?php echo route('colleges/'.$college->id);?>">
+    <form method="POST" enctype="multipart/form-data" action="<?php echo route('colleges/'.$college->id);?>">
     <input type="hidden" name="_method" value="PATCH">
 
     <!-- Fetch College Name -->
