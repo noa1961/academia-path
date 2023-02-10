@@ -33,7 +33,7 @@
             <label for="acceptanceRate">Acceptance Rate (%)</label>
           </div>
           <div class="from-group">
-            <input type="number" min="0" class="form-control mb-3" name="acceptanceRate" id="acceptanceRate" placeholder="Input the College Acceptance Rate" required>
+            <input type="number" min="0" max="100" class="form-control mb-3" name="acceptanceRate" id="acceptanceRate" placeholder="Input the College Acceptance Rate" required>
           </div>
         </div>
 
@@ -43,7 +43,7 @@
             <label for="graduationRate">Graduation Rate (%)</label>
           </div>
           <div class="from-group">
-            <input type="number" min="0" class="form-control mb-3" name="graduationRate" id="graduationRate" placeholder="Input the College Graduation Rate" required>
+            <input type="number" min="0" max="100" class="form-control mb-3" name="graduationRate" id="graduationRate" placeholder="Input the College Graduation Rate" required>
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@
             <label for="tuitionCost">Tuition Cost ($USD)</label>
           </div>
           <div class="from-group">
-            <input type="number" min="0" class="form-control mb-3" name="tuitionCost" id="tuitionCost" placeholder="Input the College Tuition Cost" required>
+            <input type="number" min="0" max="999" class="form-control mb-3" name="tuitionCost" id="tuitionCost" placeholder="Input the College Tuition Cost" required>
           </div>
         </div>
 

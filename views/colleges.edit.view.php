@@ -31,7 +31,7 @@
             <label for="acceptanceRate">Acceptance Rate (%)</label>
           </div>
           <div class="form-group">
-            <input type="number" min="0" class="form-control" name="acceptanceRate" id="acceptanceRate" value="<?php echo $college->acceptance_rate; ?>" required>
+            <input type="number" min="0" max="100" class="form-control" name="acceptanceRate" id="acceptanceRate" value="<?php echo $college->acceptance_rate; ?>" required>
           </div>
         </div>
 
@@ -41,7 +41,7 @@
             <label for="graduationRate">Graduation Rate (%)</label>
           </div>
           <div class="form-group">
-            <input type="number" min="0" class="form-control" name="graduationRate" id="graduationRate" value="<?php echo $college->graduation_rate; ?>" required>
+            <input type="number" min="0" max="100" class="form-control" name="graduationRate" id="graduationRate" value="<?php echo $college->graduation_rate; ?>" required>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
             <label for="tuitionCost">Tuition Cost ($USD)</label>
           </div>
           <div class="form-group">
-            <input type="number" min="0" class="form-control" name="tuitionCost" id="tuitionCost" value="<?php echo $college->cost; ?>" required>
+            <input type="number" min="0" max="900" class="form-control" name="tuitionCost" id="tuitionCost" value="<?php echo $college->cost; ?>" required>
           </div>
         </div>
 
