@@ -6,7 +6,7 @@ $router->get('', function() {
 });
 
 // List colleges
-$router->get('colleges', function() {
+$router->get('admin/colleges', function() {
     require 'controllers/colleges.index.php';
 });
 
@@ -16,23 +16,23 @@ $router->get('colleges/(\d+)', function($id) {
 });
 
 // Delete colleges
-$router->delete('colleges/(\d+)', function($id) {
+$router->delete('admin/colleges/(\d+)', function($id) {
     require 'controllers/colleges.delete.php';
 });
 
 // Add colleges
-$router->get('colleges/create', function() {
+$router->get('admin/colleges/create', function() {
     require 'controllers/colleges.create.php';
 });
-$router->post('colleges', function() {
+$router->post('admin/colleges', function() {
     require 'controllers/colleges.store.php';
 });
 
 // Edit colleges
-$router->get('colleges/(\d+)/edit', function($id) {
+$router->get('admin/colleges/edit/(\d+)', function($id) {
     require 'controllers/colleges.edit.php';
 });
-$router->patch('colleges/(\d+)', function($id) {
+$router->patch('admin/colleges/(\d+)', function($id) {
     require 'controllers/colleges.update.php';
 });
 

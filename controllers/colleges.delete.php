@@ -11,4 +11,4 @@ $college = $queryBuilder->deleteById('college',$id);
 unlink("img/upload/campus/$id.png");
 unlink("img/upload/logos/$id.png");
 
-redirect('colleges');
+redirect('admin/colleges');

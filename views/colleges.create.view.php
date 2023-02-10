@@ -16,7 +16,7 @@
 <body>
   <div class="container">
     <h1 class="display-4 d-flex justify-content-center mt-5 mb-5">New College</h1>
-    <form class="mb-5" enctype="multipart/form-data" method="POST" action="<?php echo route('colleges'); ?>">
+    <form class="mb-5" enctype="multipart/form-data" method="POST" action="<?php echo route('admin/colleges'); ?>">
 
       <!-- College Name -->
       <div class="form-inline">
@@ -121,7 +121,7 @@
       </div>
       <div class="buttonSection d-flex justify-content-center">
         <button type="submit" class="btn btn-dark mt-3 pl-5 pr-5">Add</button>
-        <a class="btn btn-danger mt-3 ml-2 pl-5 pr-5" href="<?php echo route('colleges'); ?>" role="button">Cancel</a>
+        <a class="btn btn-danger mt-3 ml-2 pl-5 pr-5" href="<?php echo route('admin/colleges'); ?>" role="button">Cancel</a>
       </div>
     </form>
     </div>

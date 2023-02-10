@@ -13,7 +13,7 @@
 <body>
   <div class="container">
     <h1 class="display-4 d-flex justify-content-center mt-5 mb-5">Edit College</h1>
-    <form method="POST" enctype="multipart/form-data" action="<?php echo route('colleges/'.$college->id);?>">
+    <form method="POST" enctype="multipart/form-data" action="<?php echo route('admin/colleges/'.$college->id);?>">
     <input type="hidden" name="_method" value="PATCH">
 
     <!-- Fetch College Name -->
@@ -125,7 +125,7 @@
       </div>
       <div class="buttonSection d-flex justify-content-center mb-5">
         <button type="submit" class="btn btn-dark mt-3 pl-5 pr-5">Save</button>
-        <a class="btn btn-danger mt-3 ml-2 pl-5 pr-5" href="<?php echo route('colleges'); ?>" role="button">Cancel</a>
+        <a class="btn btn-danger mt-3 ml-2 pl-5 pr-5" href="<?php echo route('admin/colleges'); ?>" role="button">Cancel</a>
       </div>
     </form>
     </div>

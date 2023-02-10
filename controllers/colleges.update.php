@@ -47,4 +47,4 @@ if(isset($_FILES["collegeImage"]) && in_array($file_extension_image, $valid_exte
 
 }
 
-redirect('colleges');
+redirect('admin/colleges');

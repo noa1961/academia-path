@@ -47,4 +47,4 @@ if(in_array($file_extension_image, $valid_extension)) {
 
 }
 
-redirect('colleges');
+redirect('admin/colleges');
