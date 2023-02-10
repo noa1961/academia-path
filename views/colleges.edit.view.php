@@ -53,7 +53,7 @@
             <label for="tuitionCost">Tuition Cost ($USD)</label>
           </div>
           <div class="form-group">
-            <input type="number" min="0" max="900" class="form-control" name="tuitionCost" id="tuitionCost" value="<?php echo $college->cost; ?>" required>
+            <input type="number" min="0" max="999" class="form-control" name="tuitionCost" id="tuitionCost" value="<?php echo $college->cost; ?>" required>
           </div>
         </div>
 
