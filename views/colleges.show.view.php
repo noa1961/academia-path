@@ -11,19 +11,28 @@
 <body>
   <div class="container">
     <section id="info" class="mt-5">
-      <h1 class="display-4 pb-3"><?php echo $college->name; ?></h1>
-      <span class="badge badge-dark badge-pill p-2 mb-2">TOP <?php echo $college->ranking; ?></span>
-      <span>-></span>
-      <p class="d-inline"><?php echo $college->location->state; ?>, <?php echo $college->location->abbreviation?></p>
+      <div class="row">
+        <div class="col-sm">
+          <h1 class="display-4 pb-3"><?php echo $college->name; ?></h1>
+          <span class="badge badge-dark badge-pill p-2 mb-2">TOP <?php echo $college->ranking; ?></span>
+          <span>-></span>
+          <p class="d-inline"><?php echo $college->location->state; ?>, <?php echo $college->location->abbreviation?></p>
+        </div>
+        <div class="col-2">
+          <div class="imageWrapper">
+            <img class="img-fluid rounded mx-auto d-block" src="<?php echo route("img/upload/logos/$id.png"); ?>">
+          </div>
+        </div>
+      </div>
     </section>
     <hr />
     <section id="overview">
       <div class="row">
-        <div class="col-10">
+        <div class="col-6">
           <h2 class="mb-3">Overview</h2>
           <p>
             <b>
-              4-year • <?php echo $college->type->type?> •
+              4-year • <?php echo $college->type->type?>
             </b>
           </p>
           <p>
@@ -38,31 +47,30 @@
             </b>
             acceptance rate
           </p>
-          <p class="mb-5">
+          <p class="mb-3">
             <b>
               <?php echo $college->cost?>K
             </b>
             average per year after aid
           </p>
         </div>
-        <div class="col">
-          <img class="img-fluid rounded mx-auto d-block" src="<?php echo route("img/upload/logos/$id.png"); ?>">
+        <div class="col-sm">
+          <section id="description">
+            <p>
+              <?php echo $college->description; ?>
+            </p>
+          </section>
         </div>
       </div>
     </section>
+    <hr>
     <section id="infoImage">
       <div class="row">
         <div class="col-sm">
-          <img class="img-fluid rounded mx-auto d-block mb-4" src="<?php echo route("img/upload/campus/$id.png"); ?>">
+            <img class="img-fluid rounded mx-auto d-block mb-5 mt-3" src="<?php echo route("img/upload/campus/$id.png"); ?>">
         </div>
         <div class="col-sm">
-          <img class="img-fluid rounded mx-auto d-block mb-4" src="<?php echo route("img/upload/campus/$id.png"); ?>">
         </div>
-      </div>
-    </section>
-    <section id="description">
-      <div class="mt-3 mb-5">
-        <p class="lead"><?php echo $college->description; ?></p>
       </div>
     </section>
   </div>

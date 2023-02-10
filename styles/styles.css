@@ -14,3 +14,8 @@ hr {
     margin-top: 1em;
     margin-bottom: 2em;
 }
+
+.imageWrapper {
+    width: 75%;
+    height: 75%;
+}
