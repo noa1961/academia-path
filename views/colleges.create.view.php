@@ -26,90 +26,114 @@
         <input type="text" class="form-control" name="name" id="name" placeholder="Input the College Name" required>
       </div>
 
-      <!-- College Acceptance Rate -->
-      <div class="form-inline">
-        <label for="acceptanceRate">Acceptance Rate (%)</label>
-      </div>
-      <div class="from-group">
-        <input type="number" min="0" class="form-control mb-3" name="acceptanceRate" id="acceptanceRate" placeholder="Input the College Acceptance Rate" required>
-      </div>
+      <div class="row">
+        <div class="col">
+          <!-- College Acceptance Rate -->
+          <div class="form-inline">
+            <label for="acceptanceRate">Acceptance Rate (%)</label>
+          </div>
+          <div class="from-group">
+            <input type="number" min="0" class="form-control mb-3" name="acceptanceRate" id="acceptanceRate" placeholder="Input the College Acceptance Rate" required>
+          </div>
+        </div>
 
-      <!-- College Graduation Rate -->
-      <div class="form-inline">
-        <label for="graduationRate">Graduation Rate (%)</label>
-      </div>
-      <div class="from-group">
-        <input type="number" min="0" class="form-control mb-3" name="graduationRate" id="graduationRate" placeholder="Input the College Graduation Rate" required>
-      </div>
-
-      <!-- College Tuition Cost -->
-      <div class="form-inline">
-        <label for="tuitionCost">Tuition Cost ($USD)</label>
-      </div>
-      <div class="from-group">
-        <input type="number" min="0" class="form-control mb-3" name="tuitionCost" id="tuitionCost" placeholder="Input the College Tuition Cost" required>
-      </div>
-
-      <!-- College Ranking -->
-      <div class="form-inline">
-        <label for="ranking">Ranking (#)</label>
-      </div>
-      <div class="form-group">
-        <input type="number" min="1" class="form-control mb-3" name="ranking" id="ranking"placeholder="College Ranking" required>
-      </div>
-
-      <!-- College Logo -->
-      <div class="form-inline">
-        <label for="collegeLogo">Logo</label>
-      </div>
-      <div class="form-group">
-        <div class="custom-file">
-          <input type="file" class="custom-file-input" name="collegeLogo" id="collegeLogo" required>
-          <label class="custom-file-label" style="color: gray;" for="validatedCustomFile1">Upload a College Logo...</label>
+        <div class="col">
+          <!-- College Graduation Rate -->
+          <div class="form-inline">
+            <label for="graduationRate">Graduation Rate (%)</label>
+          </div>
+          <div class="from-group">
+            <input type="number" min="0" class="form-control mb-3" name="graduationRate" id="graduationRate" placeholder="Input the College Graduation Rate" required>
+          </div>
         </div>
       </div>
 
-      <!-- College Image -->
-      <div class="form-inline">
-        <label for="collegeImage">Campus Image</label>
-      </div>
-      <div class="form-group">
-        <div class="custom-file">
-          <input type="file" class="custom-file-input" name="collegeImage" id="collegeImage" required>
-          <label class="custom-file-label" style="color: gray;" for="validatedCustomFile2">Upload a College Image...</label>
+      <div class="row">
+        <div class="col">
+          <!-- College Tuition Cost -->
+          <div class="form-inline">
+            <label for="tuitionCost">Tuition Cost ($USD)</label>
+          </div>
+          <div class="from-group">
+            <input type="number" min="0" class="form-control mb-3" name="tuitionCost" id="tuitionCost" placeholder="Input the College Tuition Cost" required>
+          </div>
+        </div>
+
+        <div class="col">
+          <!-- College Ranking -->
+          <div class="form-inline">
+            <label for="ranking">Ranking (#)</label>
+          </div>
+          <div class="form-group">
+            <input type="number" min="1" class="form-control mb-3" name="ranking" id="ranking"placeholder="College Ranking" required>
+          </div>
         </div>
       </div>
 
-      <!-- College Type -->
-      <div class="form-inline">
-        <label for="type_id">Type</label>
-      </div>
-      <div class="form-group">
-        <select class="custom-select" name="type_id" id="type_id">
-          <?php
-            foreach($types as $type) {
-              ?>
-              <option value="<?php echo $type->id; ?>"><?php echo $type->type; ?></option>
-              <?php
-            }
-          ?>
-        </select>
+      <div class="row">
+        <div class="col">
+          <!-- College Logo -->
+          <div class="form-inline">
+            <label for="collegeLogo">Logo</label>
+          </div>
+          <div class="form-group">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" name="collegeLogo" id="collegeLogo" required>
+              <label class="custom-file-label" style="color: gray;" for="validatedCustomFile1">Upload a College Logo...</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <!-- College Image -->
+          <div class="form-inline">
+            <label for="collegeImage">Campus Image</label>
+          </div>
+          <div class="form-group">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" name="collegeImage" id="collegeImage" required>
+              <label class="custom-file-label" style="color: gray;" for="validatedCustomFile2">Upload a College Image...</label>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- College Location -->
-      <div class="form-inline">
-        <label for="location_id">Location</label>
-      </div>
-      <div class="form-group mb-3">
-        <select class="custom-select" name="location_id" id="location_id">
-          <?php
-            foreach($locations as $location) {
-              ?>
-              <option value="<?php echo $location->id; ?>"><?php echo $location->state; ?></option>
+      <div class="row">
+        <div class="col">
+          <!-- College Type -->
+          <div class="form-inline">
+            <label for="type_id">Type</label>
+          </div>
+          <div class="form-group">
+            <select class="custom-select" name="type_id" id="type_id">
               <?php
-            }
-          ?>
-        </select>
+                foreach($types as $type) {
+                  ?>
+                  <option value="<?php echo $type->id; ?>"><?php echo $type->type; ?></option>
+                  <?php
+                }
+              ?>
+            </select>
+          </div>
+        </div>
+
+        <div class="col">
+          <!-- College Location -->
+          <div class="form-inline">
+            <label for="location_id">Location</label>
+          </div>
+          <div class="form-group mb-3">
+            <select class="custom-select" name="location_id" id="location_id">
+              <?php
+                foreach($locations as $location) {
+                  ?>
+                  <option value="<?php echo $location->id; ?>"><?php echo $location->state; ?></option>
+                  <?php
+                }
+              ?>
+            </select>
+          </div>
+        </div>
       </div>
 
       <!-- College Description -->
