@@ -13,17 +13,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="/styles/styles.css">
 </head>
+<?php include 'views/header.php'; ?>
 <body>
   <div class="container">
-    <h1 class="display-4 d-flex justify-content-center mt-5 mb-5">New College</h1>
+    <h1 class="display-4 mt-5 mb-5">New</h1>
     <form class="mb-5" enctype="multipart/form-data" method="POST" action="<?php echo route('admin/colleges'); ?>">
 
       <!-- College Name -->
       <div class="form-inline">
-        <label for="name">Name</label>
+        <label for="name">College Name</label>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" name="name" id="name" placeholder="Input the College Name" required>
+        <input type="text" class="form-control" name="name" id="name" placeholder="University" required>
       </div>
 
       <div class="row">
@@ -33,7 +34,7 @@
             <label for="acceptanceRate">Acceptance Rate (%)</label>
           </div>
           <div class="from-group">
-            <input type="number" min="0" max="100" class="form-control mb-3" name="acceptanceRate" id="acceptanceRate" placeholder="Input the College Acceptance Rate" required>
+            <input type="number" min="0" max="100" class="form-control mb-3" name="acceptanceRate" id="acceptanceRate" placeholder="1-100%" required>
           </div>
         </div>
 
@@ -43,7 +44,7 @@
             <label for="graduationRate">Graduation Rate (%)</label>
           </div>
           <div class="from-group">
-            <input type="number" min="0" max="100" class="form-control mb-3" name="graduationRate" id="graduationRate" placeholder="Input the College Graduation Rate" required>
+            <input type="number" min="0" max="100" class="form-control mb-3" name="graduationRate" id="graduationRate" placeholder="1-100%" required>
           </div>
         </div>
       </div>
@@ -55,7 +56,7 @@
             <label for="tuitionCost">Tuition Cost ($USD)</label>
           </div>
           <div class="from-group">
-            <input type="number" min="0" max="999" class="form-control mb-3" name="tuitionCost" id="tuitionCost" placeholder="Input the College Tuition Cost" required>
+            <input type="number" min="0" max="999" class="form-control mb-3" name="tuitionCost" id="tuitionCost" placeholder="50K" required>
           </div>
         </div>
 
@@ -65,7 +66,7 @@
             <label for="ranking">Ranking (#)</label>
           </div>
           <div class="form-group">
-            <input type="number" min="1" class="form-control mb-3" name="ranking" id="ranking"placeholder="College Ranking" required>
+            <input type="number" min="1" class="form-control mb-3" name="ranking" id="ranking"placeholder="1#" required>
           </div>
         </div>
       </div>
@@ -79,7 +80,7 @@
           <div class="form-group">
             <div class="custom-file">
               <input type="file" class="custom-file-input" name="collegeLogo" id="collegeLogo" required>
-              <label class="custom-file-label" style="color: gray;" for="validatedCustomFile1">Upload a College Logo...</label>
+              <label class="custom-file-label" style="color: gray;" for="validatedCustomFile1">Upload Logo</label>
             </div>
           </div>
         </div>
@@ -92,7 +93,7 @@
           <div class="form-group">
             <div class="custom-file">
               <input type="file" class="custom-file-input" name="collegeImage" id="collegeImage" required>
-              <label class="custom-file-label" style="color: gray;" for="validatedCustomFile2">Upload a College Image...</label>
+              <label class="custom-file-label" style="color: gray;" for="validatedCustomFile2">Upload Campus</label>
             </div>
           </div>
         </div>
@@ -141,13 +142,16 @@
         <label for="description">Description</label>
       </div>
       <div class="from-group mb-3">
-        <textarea class="form-control" name="description" id="description" placeholder="Input the College Description"></textarea>
+        <textarea class="form-control" name="description" id="description" placeholder="Description"></textarea>
       </div>
       <div class="buttonSection d-flex justify-content-center">
         <button type="submit" class="btn btn-dark mt-3 pl-5 pr-5">Add</button>
         <a class="btn btn-danger mt-3 ml-2 pl-5 pr-5" href="<?php echo route('admin/colleges'); ?>" role="button">Cancel</a>
       </div>
     </form>
+    <a class="back-to-top" href="<?php echo route("admin/colleges") ?>">
+      <img src="/img/up-arrow.png">
+    </a>
     </div>
 </body>
 </html>

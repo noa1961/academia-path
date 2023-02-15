@@ -10,9 +10,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="/styles/styles.css">
 </head>
+<?php include 'views/header.php'; ?>
 <body>
   <div class="container">
-    <h1 class="display-4 d-flex justify-content-center mt-5 mb-5">Edit College</h1>
+    <h1 class="display-4 mt-5 mb-5">Edit</h1>
     <form method="POST" enctype="multipart/form-data" action="<?php echo route('admin/colleges/'.$college->id);?>">
     <input type="hidden" name="_method" value="PATCH">
 
@@ -21,7 +22,7 @@
         <label for="name">Name</label>
       </div>
       <div class="form-group">
-        <input type="text" class="form-control" name="name" value="<?php echo $college->name; ?>" required>
+        <input type="text" class="form-control" name="name" placeholder="University" value="<?php echo $college->name; ?>" required>
       </div>
 
       <div class="row">
@@ -31,7 +32,7 @@
             <label for="acceptanceRate">Acceptance Rate (%)</label>
           </div>
           <div class="form-group">
-            <input type="number" min="0" max="100" class="form-control" name="acceptanceRate" id="acceptanceRate" value="<?php echo $college->acceptance_rate; ?>" required>
+            <input type="number" min="0" max="100" class="form-control" name="acceptanceRate" id="acceptanceRate" placeholder="1-100%" value="<?php echo $college->acceptance_rate; ?>" required>
           </div>
         </div>
 
@@ -41,7 +42,7 @@
             <label for="graduationRate">Graduation Rate (%)</label>
           </div>
           <div class="form-group">
-            <input type="number" min="0" max="100" class="form-control" name="graduationRate" id="graduationRate" value="<?php echo $college->graduation_rate; ?>" required>
+            <input type="number" min="0" max="100" class="form-control" name="graduationRate" id="graduationRate" placeholder="1-100%" value="<?php echo $college->graduation_rate; ?>" required>
           </div>
         </div>
       </div>
@@ -53,7 +54,7 @@
             <label for="tuitionCost">Tuition Cost ($USD)</label>
           </div>
           <div class="form-group">
-            <input type="number" min="0" max="999" class="form-control" name="tuitionCost" id="tuitionCost" value="<?php echo $college->cost; ?>" required>
+            <input type="number" min="0" max="999" class="form-control" name="tuitionCost" id="tuitionCost"  placeholder="50K" value="<?php echo $college->cost; ?>" required>
           </div>
         </div>
 
@@ -63,7 +64,7 @@
             <label for="ranking">Ranking (#)</label>
           </div>
           <div class="form-group">
-            <input type="number" min="1" class="form-control" name="ranking" id="ranking" value="<?php echo $college->ranking; ?>" required>
+            <input type="number" min="1" class="form-control" name="ranking" id="ranking" placeholder="1#" value="<?php echo $college->ranking; ?>" required>
           </div>
         </div>
       </div>
@@ -77,7 +78,7 @@
           <div class="form-group">
             <div class="custom-file">
               <input type="file" class="custom-file-input" name="collegeLogo" id="collegeLogo">
-              <label class="custom-file-label" style="color: gray;" for="validatedCustomFile1">Upload a College Logo...</label>
+              <label class="custom-file-label" style="color: gray;" for="validatedCustomFile1">Upload Logo</label>
             </div>
           </div>
         </div>
@@ -90,7 +91,7 @@
           <div class="form-group">
             <div class="custom-file">
               <input type="file" class="custom-file-input" name="collegeImage" id="collegeImage">
-              <label class="custom-file-label" style="color: gray;" for="validatedCustomFile2">Upload a College Image...</label>
+              <label class="custom-file-label" style="color: gray;" for="validatedCustomFile2">Upload Campus</label>
             </div>
           </div>
         </div>
@@ -145,13 +146,16 @@
         <label for="description">Description</label>
       </div>
       <div class="form-group">
-        <textarea class="form-control" name="description" id="description" required><?php echo $college->description; ?></textarea>
+        <textarea class="form-control" name="description" id="description"  placeholder="Description" required><?php echo $college->description; ?></textarea>
       </div>
       <div class="buttonSection d-flex justify-content-center mb-5">
         <button type="submit" class="btn btn-dark mt-3 pl-5 pr-5">Save</button>
         <a class="btn btn-danger mt-3 ml-2 pl-5 pr-5" href="<?php echo route('admin/colleges'); ?>" role="button">Cancel</a>
       </div>
     </form>
+    <a class="back-to-top" href="<?php echo route("admin/colleges") ?>">
+      <img src="/img/up-arrow.png">
+    </a>
     </div>
 </body>
 </html>

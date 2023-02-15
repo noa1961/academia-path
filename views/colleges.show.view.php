@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="/styles/styles.css">
 </head>
+<?php include 'views/header.php'; ?>
 <body>
   <div class="container">
     <section id="info" class="mt-5">
@@ -16,7 +17,9 @@
           <h1 class="display-4 pb-3"><?php echo $college->name; ?></h1>
           <span class="badge badge-dark badge-pill p-2 mb-2">TOP <?php echo $college->ranking; ?></span>
           <span>-></span>
-          <p class="d-inline"><?php echo $college->location->state; ?>, <?php echo $college->location->abbreviation?></p>
+          <a href="<?php echo route("locations/{$college->location_id}"); ?>">
+            <p class="d-inline" style="color: #1e1e1e; text-decoration: underline;" ><?php echo $college->location->state; ?>, <?php echo $college->location->abbreviation?></p>
+          </a>
         </div>
         <div class="col-2">
           <div class="imageWrapper">
@@ -73,6 +76,9 @@
         </div>
       </div>
     </section>
+    <a class="back-to-top" href="<?php echo route("admin/colleges") ?>">
+      <img src="/img/up-arrow.png">
+    </a>
   </div>
 </body>
 </html>

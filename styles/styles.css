@@ -19,3 +19,24 @@ hr {
     width: 75%;
     height: 75%;
 }
+
+.back-to-top {
+    transform: rotate(-90deg);
+    position: fixed;
+    left: 250px;
+    top: 155px;
+}
+
+.back-to-top img {
+    width: 35px;
+    height: 35px;
+}
+
+@media only screen and (max-width: 768px) {
+    .back-to-top {
+        transform: rotate(-90deg);
+        position: absolute;
+        left: 325px;
+        top: 155px;
+    }
+}

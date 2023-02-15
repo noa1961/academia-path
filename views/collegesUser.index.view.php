@@ -11,7 +11,7 @@
 <?php include 'views/header.php'; ?>
 <body>
   <div class="container mb-5">
-    <h1 class="display-4 mt-5 mb-5">Dashboard</h1>
+    <h1 class="display-4 mt-5 mb-5">Colleges</h1>
     <ul class="list-group mt-5">
       <?php
         foreach($colleges as $college) {
@@ -20,19 +20,10 @@
             <a style="color: black;" href="<?php echo route('colleges/'.$college->id);?>"><?php echo $college->name; ?> (<?php echo $college->type->type; ?>)</a>
             <span>-></span>
             <span class="badge badge-dark badge-pill p-2">TOP <?php echo $college->ranking; ?></span>
-            <form class="m-1 form-inline float-right" method="POST" action="<?php echo route('admin/colleges/'.$college->id);?>">
-              <input type="hidden" name="_method" value="DELETE">
-              <button type="submit" class="btn btn-danger">Delete</button>
-            </form>
-            <a class="m-1 btn btn-dark float-right pr-4 pl-4" href="<?php echo route('admin/colleges/edit/'.$college->id);?>" role="button">Edit</a>
           </li>
           <?php
         }
       ?>
-    </ul>
-    <div class="d-flex justify-content-center">
-      <a class="btn btn-dark mt-3 pr-4 pl-4" href="<?php echo route('admin/colleges/create'); ?>" role="button">+</a>
-    </div>
     <a class="back-to-top" href="<?php echo route("") ?>">
       <img src="/img/up-arrow.png">
     </a>
