@@ -45,4 +45,19 @@ class QueryBuilder
         $stmt->execute($attributes);
         return $stmt->rowCount() == 1;
     }
+    public function getAllFiltered($table, $filters, $class = "StdClass") {
+        $query = "SELECT * FROM $table WHERE ";
+        foreach ($filters as $filter => $value)
+            $query.= "$filter =: $filter AND ";
+        $query = rtrim($query, "AND ");
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute($filters);
+        return $stmt->fetchAll(PDO::FETCH_CLASS, $class);
+    }
+    public function findBy($table,$column,$columnvalue,$class = "StdClass") {
+        $stmt = $this->pdo->prepare("SELECT * FROM $table WHERE $column=:$column");
+        $stmt->setFetchMode(PDO::FETCH_CLASS, $class);
+        $stmt->execute(["$column"=>$columnvalue]);
+        return $stmt->fetch();
+    }
 }
