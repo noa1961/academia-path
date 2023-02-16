@@ -7,14 +7,14 @@ $connection = Connection::make();
 $queryBuilder = new QueryBuilder($connection);
 
 $college_id = $queryBuilder->create('college',[
-    'name' => $_POST['name'],
+    'name' => htmlspecialchars($_POST['name']),
     'description' => $_POST['description'],
-    'acceptance_rate' => $_POST['acceptanceRate'],
-    'graduation_rate' => $_POST['graduationRate'],
-    'ranking' => $_POST['ranking'],
-    'cost' => $_POST['tuitionCost'],
-    'type_id' => $_POST['type_id'],
-    'location_id' => $_POST['location_id']
+    'acceptance_rate' => htmlspecialchars($_POST['acceptanceRate']),
+    'graduation_rate' => htmlspecialchars($_POST['graduationRate']),
+    'ranking' => htmlspecialchars($_POST['ranking']),
+    'cost' => htmlspecialchars($_POST['tuitionCost']),
+    'type_id' => htmlspecialchars($_POST['type_id']),
+    'location_id' => htmlspecialchars($_POST['location_id'])
 ]);
 
 // Image submission

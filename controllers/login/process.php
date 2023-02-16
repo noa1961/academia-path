@@ -10,6 +10,10 @@ if (isset($_SESSION['user'])) {
     redirect('');
 }
 
+if (isset($_SESSION['admin'])) {
+    redirect('admin/colleges');
+}
+
 $user = $queryBuilder->findBy('users', 'username', $_POST['username'], 'App\Model\User');
 if ($user == false || $user->password != $_POST['password'] ) {
     redirect('login');
