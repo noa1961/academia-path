@@ -48,7 +48,7 @@ class QueryBuilder
     public function getAllFiltered($table, $filters, $class = "StdClass") {
         $query = "SELECT * FROM $table WHERE ";
         foreach ($filters as $filter => $value)
-            $query.= "$filter =: $filter AND ";
+            $query.= "$filter=:$filter AND ";
         $query = rtrim($query, "AND ");
         $stmt = $this->pdo->prepare($query);
         $stmt->execute($filters);
