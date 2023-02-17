@@ -1,6 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 
+session_start();
 use App\Router;
 use App\Config;
 

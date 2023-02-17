@@ -50,11 +50,11 @@ $router->patch('admin/colleges/(\d+)', function($id) {
 $router->get('login', function() {
     require 'controllers/login/login.php';
 });
-
 $router->post('login', function() {
     require 'controllers/login/process.php';
 });
 
+// Logout User
 $router->get('logout', function() {
     unset($_SESSION['user']);
     unset($_SESSION['user_id']);

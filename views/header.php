@@ -9,14 +9,6 @@
     <link rel="stylesheet" type="text/css" href="/styles/styles.css">
     </head>
 <header>
-<!--     <nav class="navbar navbar-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="<?php echo route(''); ?>">
-                <img src="<?php echo route($appLogo); ?>"  width="35" height="40" class="d-inline-block align-text-top">
-            </a>
-        </div>
-    </nav>
-    <a class="btn btn-lg btn-outline-dark" href="<?php echo route('admin/colleges'); ?>">Admin View</a> -->
     <nav class="navbar navbar-fixed-top navbar-expand-lg px-0 py-3">
         <div class="container-xl">
             <!-- Logo -->
@@ -41,16 +33,30 @@
                 </div>
 
                 <!-- Right navigation -->
-                <div class="navbar-nav ms-lg-4 pr-3">
-                    <a class="btn btn-light w-full w-lg-auto" href="<?php echo route("login") ?>">Log In</a>
-                </div>
+                <?php
+                    if (isset($_SESSION['user'])) {
+                    ?>
+                        <div class="d-flex align-items-lg-center mt-3 mt-lg-0">
+                            <a href="<?php echo route("logout") ?>" class="btn btn btn-dark w-full w-lg-auto">
+                                Logout
+                            </a>
+                        </div>
+                    <?php
+                    } else {
+                        ?>
+                        <div class="navbar-nav ms-lg-4 pr-3">
+                            <a class="btn btn-light w-full w-lg-auto" href="<?php echo route("login") ?>">Log In</a>
+                        </div>
 
-                <!-- Action -->
-                <div class="d-flex align-items-lg-center mt-3 mt-lg-0">
-                    <a href="<?php echo route("register") ?>" class="btn btn btn-dark w-full w-lg-auto">
-                    Register
-                    </a>
-                </div>
+                        <!-- Action -->
+                        <div class="d-flex align-items-lg-center mt-3 mt-lg-0">
+                            <a href="<?php echo route("register") ?>" class="btn btn btn-dark w-full w-lg-auto">
+                                Register
+                            </a>
+                        </div>
+                    <?php
+                    }
+                    ?>
             </div>
         </div>
     </nav>

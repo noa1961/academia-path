@@ -3,6 +3,9 @@
 use App\Database\Connection;
 use App\Database\QueryBuilder;
 
+// Check if user has perms
+
+
 $connection = Connection::make();
 $queryBuilder = new QueryBuilder($connection);
 
