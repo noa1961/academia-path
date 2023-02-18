@@ -26,5 +26,9 @@ if ($user == false) {
     $_SESSION["user"] = $user->name;
     $_SESSION["user_id"] = $user->id;
     $_SESSION["user_role"] = $user->role;
-    redirect('');
+    if ($user->role == 'admin') {
+        redirect('admin/colleges');
+    } else {
+        redirect('');
+    }
 }
