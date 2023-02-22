@@ -18,14 +18,14 @@
         foreach($colleges as $college) {
           ?>
           <li class="list-group-item">
-            <a style="color: black;" href="<?php echo route('colleges/'.$college->id);?>"><?php echo $college->name; ?> (<?php echo $college->type->type; ?>)</a>
+            <a style="color: black;" href="<?php echo route('colleges/'.$college->id);?>"><?php echo $college->name; ?></a>
             <span>-></span>
             <span class="badge badge-dark badge-pill p-2">TOP <?php echo $college->ranking; ?></span>
           </li>
           <?php
         }
       ?>
-    <a class="back-to-top" href="<?php echo route('colleges/'.$college->id);?>">
+    <a class="back-to-top" href="<?php echo route('colleges');?>">
       <img src="/img/up-arrow.png">
     </a>
     </div>

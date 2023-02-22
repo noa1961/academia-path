@@ -32,3 +32,4 @@ if ($user == false) {
         redirect('');
     }
 }
+var_dump($_SESSION);

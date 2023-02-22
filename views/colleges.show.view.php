@@ -76,9 +76,21 @@
         </div>
       </div>
     </section>
-    <a class="back-to-top" href="<?php echo route("admin/colleges") ?>">
-      <img src="/img/up-arrow.png">
-    </a>
+    <?php
+      if (isset($_SESSION['admin'])) {
+      ?>
+        <a class="back-to-top" href="<?php echo route("admin/colleges") ?>">
+          <img src="/img/up-arrow.png">
+        </a>
+        <?php
+      } else {
+        ?>
+        <a class="back-to-top" href="<?php echo route("colleges") ?>">
+          <img src="/img/up-arrow.png">
+        </a>
+      <?php
+      }
+      ?>
   </div>
 </body>
 </html>

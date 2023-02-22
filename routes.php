@@ -58,6 +58,7 @@ $router->post('login', function() {
 $router->get('logout', function() {
     unset($_SESSION['user']);
     unset($_SESSION['user_id']);
+    unset($_SESSION['user_role']);
     redirect('');
 });
 
