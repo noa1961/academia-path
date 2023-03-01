@@ -27,9 +27,16 @@
                 <!-- Nav -->
                 <div class="navbar-nav mx-lg-auto">
                     <a class="nav-link active" style="color: black;" href="<?php echo route("colleges") ?>" aria-current="page">All Colleges</a>
-                    <a class="nav-link" style="color: black;" href="#">Example 2</a>
-                    <a class="nav-link" style="color: black;" href="#">Example 3</a>
-                    <a class="nav-link" style="color: black;" href="#">Example 4</a>
+                    <!-- <a class="nav-link" style="color: black;" href="#">Example 2</a>
+                    <a class="nav-link" style="color: black;" href="#">Example 3</a> -->
+                    <?php
+                    if(!isset($_SESSION['user']) || ($_SESSION['user_role'] != 'admin')) {
+                    } else {
+                        ?>
+                        <a class="nav-link" href="<?php echo route("admin/colleges") ?>" style="color: black;" href="#">Admin Dashboard</a>
+                        <?php
+                    }
+                    ?>
                 </div>
 
                 <!-- Right navigation -->

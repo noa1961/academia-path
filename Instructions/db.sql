@@ -15,9 +15,6 @@ mysql -u adm -p
 
 
 -- Create Tables
-
-
-
 -- Table 'type' (public or private college)
 CREATE TABLE type (
     id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,

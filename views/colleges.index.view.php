@@ -12,6 +12,9 @@
 <body>
   <div class="container mb-5">
     <h1 class="display-4 mt-5 mb-5">Dashboard</h1>
+    <div class="d-flex justify-content-center">
+      <a class="btn btn-dark mt-3 pr-4 pl-4" href="<?php echo route('admin/colleges/create'); ?>" role="button">+</a>
+    </div>
     <ul class="list-group mt-5">
       <?php
         foreach($colleges as $college) {
@@ -30,9 +33,6 @@
         }
       ?>
     </ul>
-    <div class="d-flex justify-content-center">
-      <a class="btn btn-dark mt-3 pr-4 pl-4" href="<?php echo route('admin/colleges/create'); ?>" role="button">+</a>
-    </div>
     <a class="back-to-top" href="<?php echo route("") ?>">
       <img src="/img/up-arrow.png">
     </a>
